@@ -26,7 +26,9 @@ $lsj
 ```
 
 INSTALL:
+```bash
 git clone https://github.com/BrickEater/ls-json.git
 cd ls-json
 python build.py
 #mv ./build/lsj /usr/local/bin/lsj
+```
