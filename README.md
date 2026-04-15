@@ -2,7 +2,7 @@ PURPOSE:
 A CLI binary which outputs directory listings into JSON meant to be used for further rendering and customization.
 
 EXAMPLE:
-'''
+'''json
 $lsj
 {
 	"/home/user/Repos/projects/c/ls-json":	{
