@@ -2,6 +2,8 @@ import subprocess
 import sys
 from pathlib import Path
 
+binary_name = "lsj"
+
 Path("build").mkdir(parents=True, exist_ok=True)
 
 subprocess.run(
@@ -18,7 +20,7 @@ result = subprocess.run(
         "main.c",
         "third_party/cjson/cJSON.c",
         "-o",
-        "build/main",
+        "build/" + binary_name,
         *sys.argv[1:],
     ],
 )
@@ -28,7 +30,7 @@ try:
         raise subprocess.CalledProcessError(result.returncode, "clang")
     subprocess.run(
         [
-            "./build/main",
+            "./build/" + binary_name,
             *sys.argv[1:]
         ],
     )
